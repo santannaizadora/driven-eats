@@ -1,0 +1,16 @@
+.produtos{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrocel{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: fit-content;
+}
+
+.ultimo{
+    margin-bottom: 1rem;
+}
