@@ -1,16 +1,85 @@
-.produtos{
+.produtos {
     margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
+
 }
 
-.carrocel{
+.carrocel {
     display: flex;
     overflow-x: scroll;
+    width: 100%;
     overflow-y: hidden;
-    height: fit-content;
 }
 
-.ultimo{
+.carrocel::-webkit-scrollbar {
+    width: 100%;
+    height: 8px;
+}
+
+.carrocel::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    border-radius: 10px;
+    border: 3px solid transparent;
+
+}
+
+.ultimo {
     margin-bottom: 1rem;
+}
+
+.produto {
+    position: relative;
+    height: 226px;
+    width: 172px;
+    border-radius: 9px;
+    margin-right: 19px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+}
+
+.produto img {
+    height: 87px;
+    width: 144px;
+    margin-top: 18px;
+    margin-bottom: 0.8rem
+}
+
+.produto img, 
+.produto h4, 
+.produto p{
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.produtos h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem
+}
+
+.produto h4{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.descricao{
+    color:#A6A6A6;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.preco{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.check{
+    box-shadow: inset 0 0 0 9px  green;
+}
+
+ion-icon{
+    color: green;
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+    font-size: 25px;
 }
