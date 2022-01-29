@@ -103,6 +103,19 @@ const selectProducts = (classePrato, idElement) => {
         SelectedItem.classList.add("selecionado");
         const check = document.querySelector(`.${classePrato} .selecionado ion-icon`)
         check.classList.remove("escondido");
-    
 
+        habilitarConfirmar();
+}
+
+function habilitarConfirmar(){
+    let botao = document.querySelector(".botao");
+    if(botao.classList.contains("desabilitado")){
+        let selecionados = document.querySelectorAll(".selecionado");
+        if(selecionados.length == 3){
+
+            botao.innerHTML = "Fechar pedido";
+            botao.classList.remove("desabilitado");
+            botao.classList.add("habilitado");
+        }
+    }
 }

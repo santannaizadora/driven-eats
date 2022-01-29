@@ -14,11 +14,18 @@
 .fazer-pedido button {
     height: 61px;
     width: 80%;
-    background: #CBCBCB;
     color: #fff;
     border: 1px solid #eee;
     border-radius: 50px;
     text-shadow: none;
     font-size: 1.1rem;
     text-align: center;
+}
+
+.desabilitado{
+    background: #CBCBCB;
+}
+
+.habilitado{
+    background-color: #32B72F;
 }
