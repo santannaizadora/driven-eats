@@ -1,8 +1,24 @@
-.fazer-pedido{
+.fazer-pedido {
     height: 5.5rem;
-    background-color: aqua;
+    background-color: #FFFFFF;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fazer-pedido button {
+    height: 61px;
+    width: 80%;
+    background: #CBCBCB;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    text-shadow: none;
+    font-size: 1.1rem;
+    text-align: center;
 }
