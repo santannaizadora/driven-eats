@@ -116,6 +116,8 @@ function habilitarConfirmar(){
             botao.innerHTML = "Fechar pedido";
             botao.classList.remove("desabilitado");
             botao.classList.add("habilitado");
+            botao.disabled = false;
         }
+        
     }
 }
