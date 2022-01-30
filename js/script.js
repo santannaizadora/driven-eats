@@ -2,77 +2,77 @@ const mainDish = [
     {
         id: 1,
         type: 'dish',
-        image: 'img/frango_yin_yang 1.png',
-        name: ' Frango Yin-Yang',
+        image: 'img/frango_yin_yang.png',
+        name: 'Frango Yin-Yang',
         price: 19.90,
         description: 'Um pouco de batata, um pouco de salada'
     },
     {
         id: 2,
         type: 'dish',
-        image: 'img/frango_yin_yang 1.png',
-        name: ' Frango Yin-Yang com batata',
-        price: 9.90,
-        description: 'Um pouco de batata'
+        image: 'img/strogonoff.jpg',
+        name: 'Strogonoff',
+        price: 20.90,
+        description: 'Strogonoff com arroz e batata palha'
     },
     {
         id: 3,
         type: 'dish',
-        image: 'img/frango_yin_yang 1.png',
-        name: ' Frango Yin-Yang com salada',
-        price: 10.90,
-        description: 'Um pouco de salada'
+        image: 'img/churrasco.jpg',
+        name: 'Espetinho de carne',
+        price: 5.90,
+        description: 'Espetinho na brasa'
     },
 ];
 const drinks = [
     {
         id: 4,
         type: 'drink',
-        image: 'img/coquinha_gelada 2.png',
-        name: ' Coca',
-        price: 19.90,
-        description: 'Um pouco de batata, um pouco de salada'
+        image: 'img/coquinha_gelada.png',
+        name: 'Coca',
+        price: 5.50,
+        description: 'Lata 350ml'
     },
     {
         id: 5,
         type: 'drink',
-        image: 'img/coquinha_gelada 2.png',
-        name: ' Fanta',
-        price: 9.90,
-        description: 'Um pouco de batata'
+        image: 'img/fanta.jpg',
+        name: 'Fanta',
+        price: 4.90,
+        description: 'Lata 350ml'
     },
     {
         id: 6,
         type: 'drink',
-        image: 'img/coquinha_gelada 2.png',
-        name: ' Pepsi',
-        price: 10.90,
-        description: 'Um pouco de salada'
+        image: 'img/pepsi.jpg',
+        name: 'Pepsi',
+        price: 5.50,
+        description: 'Lata 350ml'
     },
 ];
 const desserts = [
     {
         id: 7,
         type: 'dessert',
-        image: 'img/pudim 2.png',
-        name: ' Cookie',
-        price: 19.90,
-        description: 'Um pouco de batata, um pouco de salada'
+        image: 'img/cookie.jpeg',
+        name: 'Cookie',
+        price: 9.90,
+        description: 'Cookie de chocolate'
     },
     {
         id: 8,
         type: 'dessert',
-        image: 'img/pudim 2.png',
-        name: ' Pudim',
-        price: 9.90,
-        description: 'Um pouco de batata'
+        image: 'img/pudim.png',
+        name: 'Pudim',
+        price: 12.90,
+        description: 'Pudim de leite'
     },
     {
         id: 9, type: 'dessert',
-        image: 'img/pudim 2.png',
-        name: ' Sorvete',
-        price: 10.90,
-        description: 'Um pouco de salada'
+        image: 'img/sorvete.jpg',
+        name: 'Sorvete',
+        price: 0.99,
+        description: 'sorvete de morango'
     },
 ];
 
@@ -152,13 +152,13 @@ const fecharPedido = () => {
     const nome = prompt("Qual seu nome?");
     const address = prompt("Informe seu endereço:");
     const orderText = `Olá, gostaria de fazer o pedido:
+- Prato: ${pedido.pratoPrincipal.name}
+- Bebida: ${pedido.bebida.name}
+- Sobremesa: ${pedido.sobremesa.name}
+Total: R$ ${(pedido.pratoPrincipal.price + pedido.bebida.price + pedido.sobremesa.price).toFixed(2)}
 
--Prato: ${pedido.pratoPrincipal.name}
--Bebida: ${pedido.bebida.name}
--Sobremesa: ${pedido.sobremesa.name}
--Total: R$ ${(pedido.pratoPrincipal.price + pedido.bebida.price + pedido.sobremesa.price).toFixed(2)}
--Nome: ${nome}
--Endereço: ${address}
+Nome: ${nome}
+Endereço: ${address}
 `
 
     const uri = encodeURIComponent(orderText);
