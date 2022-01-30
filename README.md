@@ -6,10 +6,6 @@ Para isso, o restaurante só trabalha com um tipo específico de pedido: o combo
 
 O site permite de forma fácil a escolha do seu combo, enviando em seguida o pedido por WhatsApp diretamente para o restaurante.
 
-# WakaTime
-
-- Nomeie a pasta do seu projeto com: `projeto3-driveneats`
-
 # Requisitos
 
 - Versionamento
