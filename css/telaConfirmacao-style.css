@@ -1,0 +1,65 @@
+.confirmar-pedido{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.janela-confirmacao{
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    height: 353px;
+    width: 90%;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.janela-confirmacao h3{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom:30px;
+}
+
+.janela-confirmacao button{
+    height: 52px;
+    width: 85%;
+    border: 1px solid #50D074;
+    border-radius: 50px;
+    text-shadow: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-size: 22px ;
+}
+
+.confirmar{ 
+    background-color: #FFF;
+    color: #50D074;
+}
+
+.cancelar{
+    background-color: #50D074;
+    color: #FFF;
+}
+
+#listaPedido{
+    width: 85%;
+    margin: 15px 0;
+}
+
+#listaPedido div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 22px;
+}

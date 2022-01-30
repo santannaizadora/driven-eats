@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/header-style.css">
     <link rel="stylesheet" href="./css/produtos-style.css">
     <link rel="stylesheet" href="./css/barraInferior-style.css">
+    <link rel="stylesheet" href="./css/barraInferior-style.css">
+    <link rel="stylesheet" href="./css/telaConfirmacao-style.css">
     <link rel="stylesheet" href="./css/utils.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,30 +34,52 @@
         </div>
     </header>
 
+    <section class="confirmar-pedido escondido">
+
+        <div class="janela-confirmacao">
+            
+            <h3>Confirme seu pedido</h3>
+
+            <div id="listaPedido">
+                
+            </div>
+
+            <button class="confirmar" onclick="fecharPedido()">Tudo certo, pode pedir!</button>
+            <button class="cancelar" onclick="cancelar()">Cancelar</button>
+        </div>
+
+    </section>
+
     <div class="conteudo">
-        
         <div class="produtos">
             <h3 class="righteous"> Primeiro, seu prato</h3>
 
-            <div id="carrocel-prato-principal" class="carrocel dish" data-identifier="dishes"></div>
+            <div id="carrocel-prato-principal" class="carrocel dish" data-identifier="dishes">
+
+            </div>
         </div>
 
         <div class="produtos">
             <h3 class="righteous"> Agora, sua bebida</h3>
 
-            <div id="carrocel-bebidas" class="carrocel drink" data-identifier="drinks"></div>
+            <div id="carrocel-bebidas" class="carrocel drink" data-identifier="drinks">
+
+            </div>
         </div>
 
         <div class="produtos ultimo">
             <h3 class="righteous"> Por fim, sua sobremesa</h3>
 
-            <div id="carrocel-sobremesas" class="carrocel dessert" data-identifier="desserts"></div>
+            <div id="carrocel-sobremesas" class="carrocel dessert" data-identifier="desserts">
+                
+            </div>
         </div>
-
+        
     </div>
-    <section class="fazer-pedido">
-        <button class="botao desabilitado" onclick="alert('!!!!!!!')" disabled="disabled" type="submit">Selecione os 3 itens <br> para fechar o pedido</button>
-    </section>
+    <footer class="fazer-pedido">
+        <button class="botao-desabilitado desabilitado" disabled="disabled" type="submit">Selecione os 3 itens <br> para fechar o pedido</button>
+        <button class="botao-habilitado habilitado escondido" onclick="confirmarPedido()" type="submit">Fechar pedido</button>
+    </footer>
 </body>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>

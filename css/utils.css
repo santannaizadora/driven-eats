@@ -1,3 +1,11 @@
 .righteous{
     font-family: 'Righteous', cursive;
 }
+
+.escondido{
+    display: none;
+}
+
+.bold{
+    font-weight: bold;
+}
