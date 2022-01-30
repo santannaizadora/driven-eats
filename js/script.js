@@ -162,7 +162,7 @@ Endereço: ${address}
 `
 
     const uri = encodeURIComponent(orderText);
-    window.open(`https://wa.me/5534991992825?text=${uri}`)
+    window.open(`https://wa.me/5534999999999?text=${uri}`)
 };
 
 const habilitarConfirmar = () => {
