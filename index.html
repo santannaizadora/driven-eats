@@ -44,7 +44,7 @@
                 
             </div>
 
-            <button id="confirmar" class="confirmar"></button>
+            <button id="confirmar" onclick="fecharPedido()" class="confirmar">Tudo certo, pode pedir!</button>
             <button class="cancelar" onclick="cancelar()">Cancelar</button>
         </div>
 
@@ -78,7 +78,7 @@
     </div>
     <footer class="fazer-pedido">
         <button class="botao-desabilitado desabilitado" disabled="disabled" type="submit">Selecione os 3 itens <br> para fechar o pedido</button>
-        <button class="botao-habilitado habilitado escondido" onclick="confirmarPedido() ,fecharPedido()" type="submit">Fechar pedido</button>
+        <button class="botao-habilitado habilitado escondido" onclick="confirmarPedido()" type="submit">Fechar pedido</button>
     </footer>
 </body>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

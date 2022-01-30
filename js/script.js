@@ -157,13 +157,12 @@ const fecharPedido = () => {
 -Bebida: ${pedido.bebida.name}
 -Sobremesa: ${pedido.sobremesa.name}
 -Total: R$ ${(pedido.pratoPrincipal.price + pedido.bebida.price + pedido.sobremesa.price).toFixed(2)}
-Nome: ${nome}
-Endereço: ${address}
+-Nome: ${nome}
+-Endereço: ${address}
 `
 
     const uri = encodeURIComponent(orderText);
-    const confirmar = document.getElementById('confirmar');
-    confirmar.innerHTML = `<a href="https://wa.me/5534991992825?text=${uri}">Tudo certo, pode pedir!</a>`;
+    window.open(`https://wa.me/5534991992825?text=${uri}`)
 };
 
 const habilitarConfirmar = () => {
