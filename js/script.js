@@ -3,7 +3,7 @@ const mainDish = [
         id: 1,
         type: 'dish',
         image: 'img/frango_yin_yang 1.png',
-        name: ' Frango Yin-Yang', 
+        name: ' Frango Yin-Yang',
         price: 19.90,
         description: 'Um pouco de batata, um pouco de salada'
     },
@@ -11,7 +11,7 @@ const mainDish = [
         id: 2,
         type: 'dish',
         image: 'img/frango_yin_yang 1.png',
-        name: ' Frango Yin-Yang com batata', 
+        name: ' Frango Yin-Yang com batata',
         price: 9.90,
         description: 'Um pouco de batata'
     },
@@ -19,7 +19,7 @@ const mainDish = [
         id: 3,
         type: 'dish',
         image: 'img/frango_yin_yang 1.png',
-        name: ' Frango Yin-Yang com salada', 
+        name: ' Frango Yin-Yang com salada',
         price: 10.90,
         description: 'Um pouco de salada'
     },
@@ -29,7 +29,7 @@ const drinks = [
         id: 4,
         type: 'drink',
         image: 'img/coquinha_gelada 2.png',
-        name: ' Coca', 
+        name: ' Coca',
         price: 19.90,
         description: 'Um pouco de batata, um pouco de salada'
     },
@@ -37,7 +37,7 @@ const drinks = [
         id: 5,
         type: 'drink',
         image: 'img/coquinha_gelada 2.png',
-        name: ' Fanta', 
+        name: ' Fanta',
         price: 9.90,
         description: 'Um pouco de batata'
     },
@@ -55,7 +55,7 @@ const desserts = [
         id: 7,
         type: 'dessert',
         image: 'img/pudim 2.png',
-        name: ' Cookie', 
+        name: ' Cookie',
         price: 19.90,
         description: 'Um pouco de batata, um pouco de salada'
     },
@@ -63,14 +63,14 @@ const desserts = [
         id: 8,
         type: 'dessert',
         image: 'img/pudim 2.png',
-        name: ' Pudim', 
+        name: ' Pudim',
         price: 9.90,
         description: 'Um pouco de batata'
     },
     {
         id: 9, type: 'dessert',
         image: 'img/pudim 2.png',
-        name: ' Sorvete', 
+        name: ' Sorvete',
         price: 10.90,
         description: 'Um pouco de salada'
     },
@@ -110,7 +110,7 @@ const loadProducts = (products, idElement) => {
 const selectProducts = (typeProduct, idProduct) => {
     const selecionado = document.querySelector(`.${typeProduct} .selecionado`);
     let check;
-    
+
     if (selecionado !== null) {
         check = document.querySelector(`.${typeProduct} .selecionado ion-icon`)
         selecionado.classList.remove("selecionado");
@@ -130,7 +130,7 @@ const selectProducts = (typeProduct, idProduct) => {
 const addProductToOrder = (typeProduct, idProduct) => {
     let product;
 
-    switch(typeProduct) {
+    switch (typeProduct) {
         case 'dish':
             product = mainDish.find(item => item.id === idProduct);
             pedido.pratoPrincipal = product;
@@ -145,17 +145,31 @@ const addProductToOrder = (typeProduct, idProduct) => {
             break;
     };
 
-
 };
 
 const fecharPedido = () => {
-    
+
+    const nome = prompt("Qual seu nome?");
+    const address = prompt("Informe seu endereço:");
+    const orderText = `Olá, gostaria de fazer o pedido:
+
+-Prato: ${pedido.pratoPrincipal.name}
+-Bebida: ${pedido.bebida.name}
+-Sobremesa: ${pedido.sobremesa.name}
+-Total: R$ ${(pedido.pratoPrincipal.price + pedido.bebida.price + pedido.sobremesa.price).toFixed(2)}
+Nome: ${nome}
+Endereço: ${address}
+`
+
+    const uri = encodeURIComponent(orderText);
+    const confirmar = document.getElementById('confirmar');
+    confirmar.innerHTML = `<a href="https://wa.me/5534991992825?text=${uri}">Tudo certo, pode pedir!</a>`;
 };
 
-const habilitarConfirmar = () =>{
+const habilitarConfirmar = () => {
     const selecionados = document.querySelectorAll(".selecionado");
 
-    if(selecionados.length === 3){
+    if (selecionados.length === 3) {
         const botaoDesabilitado = document.querySelector(".botao-desabilitado");
         const botaoHabilitado = document.querySelector(".botao-habilitado");
         botaoDesabilitado.classList.add("escondido");
@@ -184,5 +198,5 @@ const cancelar = () => {
 }
 
 const parsePriceToString = (value) => {
-    return value.toFixed(2).toString().replace(".",",");
+    return value.toFixed(2).toString().replace(".", ",");
 }
