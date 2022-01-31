@@ -41,6 +41,7 @@
     width: 144px;
     margin-top: 18px;
     margin-bottom: 0.8rem
+    border-radius:5px;
 }
 
 .produto img, 
